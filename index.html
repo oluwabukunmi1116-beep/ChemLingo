@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore the JSS1 and JSS2 English and Chemistry syllabus, organised by school term.">
+  <title>JSS Syllabus | English &amp; Chemistry</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Syllabus home">
+      <span class="brand-mark" aria-hidden="true">S</span>
+      <span>Study<span class="brand-light">Map</span></span>
+    </a>
+    <span class="topbar-label">JUNIOR SECONDARY SCHOOL</span>
+  </header>
+
+  <main class="page-shell">
+    <section class="intro" aria-labelledby="page-title">
+      <p class="eyebrow"><span class="eyebrow-dot"></span> YOUR LEARNING GUIDE</p>
+      <h1 id="page-title">Learn with a <span>clear plan.</span></h1>
+      <p class="intro-copy">Explore the English and Chemistry topics for JSS1 and JSS2, arranged by school term.</p>
+    </section>
+
+    <section class="syllabus-panel" aria-label="Syllabus topics">
+      <div class="toolbar">
+        <div class="select-group">
+          <label class="sr-only" for="class-select">Select class</label>
+          <select id="class-select">
+            <option value="jss1">JSS 1</option>
+            <option value="jss2">JSS 2</option>
+          </select>
+          <label class="sr-only" for="subject-select">Select subject</label>
+          <select id="subject-select">
+            <option value="english">English</option>
+            <option value="chemistry">Chemistry</option>
+          </select>
+        </div>
+        <label class="search-box">
+          <span class="search-icon" aria-hidden="true"></span>
+          <span class="sr-only">Search topics</span>
+          <input id="topic-search" type="search" placeholder="Search topics..." autocomplete="off">
+          <kbd>Ctrl K</kbd>
+        </label>
+      </div>
+
+      <div class="term-bar">
+        <div class="term-tabs" role="tablist" aria-label="School term">
+          <button class="term-tab is-active" type="button" role="tab" aria-selected="true" data-term="first">First term</button>
+          <button class="term-tab" type="button" role="tab" aria-selected="false" data-term="second">Second term</button>
+          <button class="term-tab" type="button" role="tab" aria-selected="false" data-term="third">Third term</button>
+        </div>
+        <span class="topic-count" id="topic-count" aria-live="polite"></span>
+      </div>
+
+      <div class="topics-grid" id="topics-grid" aria-live="polite"></div>
+      <div class="empty-state" id="empty-state" hidden>
+        <span class="empty-icon" aria-hidden="true">⌕</span>
+        <h2>No topics found</h2>
+        <p>Try a different search or choose another term.</p>
+      </div>
+      <p class="syllabus-note">Topic order may vary by school. Use this guide alongside your teacher’s scheme of work.</p>
+    </section>
+
+    <section class="practice-panel" aria-labelledby="practice-title">
+      <div class="practice-heading">
+        <div>
+          <p class="eyebrow"><span class="eyebrow-dot"></span> CHECK YOUR UNDERSTANDING</p>
+          <h2 id="practice-title">Practice questions</h2>
+          <p class="practice-copy">Try each question, then open it to check your answer.</p>
+        </div>
+        <span class="practice-total" id="practice-total">10 questions</span>
+      </div>
+      <div class="questions-list" id="questions-list"></div>
+    </section>
+
+    <footer class="page-footer">
+      <span>One topic at a time. You’ve got this.</span>
+      <span class="footer-spark" aria-hidden="true">✦</span>
+    </footer>
+  </main>
+</body>
+</html>
